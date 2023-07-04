@@ -33,6 +33,7 @@ namespace HaRepacker.GUI
         public MainForm(string wzToLoad, bool usingPipes, bool firstrun)
         {
             InitializeComponent();
+            encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeMapleFire);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeGMS);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeMSEA);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeNone);
@@ -513,7 +514,7 @@ namespace HaRepacker.GUI
             new Thread(new ParameterizedThreadStart(ProgressBarThread)).Start(serializer);
         }
 
-        private void imgToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void imgToolStripMenuItem1_Click(object sender, EventArgs e) //这里是直接保存img
         {
             string outPath = GetOutputDirectory();
             if (outPath == "") return;

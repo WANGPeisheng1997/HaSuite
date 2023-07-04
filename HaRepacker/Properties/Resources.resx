@@ -365,4 +365,7 @@ Click "Yes" to download the new version.</value>
   <data name="XmlFilter" xml:space="preserve">
     <value>eXtended Markup Language (*.xml)</value>
   </data>
+  <data name="EncTypeMapleFire" xml:space="preserve">
+    <value>MapleFire</value>
+  </data>
 </root>

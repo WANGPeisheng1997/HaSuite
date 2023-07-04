@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaRepackerLib", "HaRepackerLib\HaRepackerLib.csproj", "{B68C971F-4B8A-44A3-88D0-6213D1A512E7}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaRepacker", "HaRepacker\HaRepacker.csproj", "{0B7155EF-1EB0-4FAE-BA56-8064CBAF2BEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsUI", "dockpanelsuite\WinFormsUI\WinFormsUI.csproj", "{C75532C4-765B-418E-B09B-46D36B2ABDB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WZTool", "BruteForceDecrypter\WZTool.csproj", "{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaCryption", "HaCryption\HaCryption.csproj", "{EB004446-2B9B-49EC-B5D1-B26C181B1B33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,8 +121,35 @@ Global
 		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|x64.Build.0 = Release|Any CPU
 		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|x86.ActiveCfg = Release|Any CPU
 		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|x86.Build.0 = Release|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Debug|x64.Build.0 = Debug|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Debug|x86.Build.0 = Debug|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Release|x64.ActiveCfg = Release|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Release|x64.Build.0 = Release|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Release|x86.ActiveCfg = Release|Any CPU
+		{2AD9317C-EA18-4917-92A1-4CC85A5BBFB5}.Release|x86.Build.0 = Release|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Debug|x64.Build.0 = Debug|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Debug|x86.Build.0 = Debug|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Release|x64.ActiveCfg = Release|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Release|x64.Build.0 = Release|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Release|x86.ActiveCfg = Release|Any CPU
+		{EB004446-2B9B-49EC-B5D1-B26C181B1B33}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF1E7627-B9AD-480E-96A7-2CCA2C6EE86C}
 	EndGlobalSection
 EndGlobal

@@ -24,6 +24,7 @@ namespace HaRepacker.GUI
         public SaveForm(HaRepackerMainPanel panel, WzNode wzNode)
         {
             InitializeComponent();
+            encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeMapleFire);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeGMS);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeMSEA);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeNone);
@@ -34,15 +35,17 @@ namespace HaRepacker.GUI
 
         public void PrepareAllImgs(WzDirectory dir)
         {
-            foreach (WzImage img in dir.WzImages)
-                img.Changed = true;
-            foreach (WzDirectory subdir in dir.WzDirectories)
-                PrepareAllImgs(subdir);
+            dir.ParseImages();
+            //foreach (WzImage img in dir.WzImages)
+            //    img.Changed = true;
+            //foreach (WzDirectory subdir in dir.WzDirectories)
+            //    PrepareAllImgs(subdir);
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
             if (versionBox.Value < 0) { Warning.Error(HaRepacker.Properties.Resources.SaveVersionError); return; }
+            bool bUseMapleFireKey = (wzf.MapleVersion != (WzMapleVersion)encryptionBox.SelectedIndex) && (WzMapleVersion)encryptionBox.SelectedIndex is WzMapleVersion.MapleFire;
             SaveFileDialog dialog = new SaveFileDialog() { Title = HaRepacker.Properties.Resources.SelectOutWz, Filter = string.Format("{0}|*.wz", HaRepacker.Properties.Resources.WzFilter) };
             if (dialog.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
             if (wzf is WzFile && wzf.MapleVersion != (WzMapleVersion)encryptionBox.SelectedIndex)
@@ -52,14 +55,14 @@ namespace HaRepacker.GUI
                 ((WzFile)wzf).Version = (short)versionBox.Value;
             if (wzf.FilePath != null && wzf.FilePath.ToLower() == dialog.FileName.ToLower())
             {
-                wzf.SaveToDisk(dialog.FileName + "$tmp");
+                wzf.SaveToDisk(dialog.FileName + "$tmp", bUseMapleFireKey);
                 wzNode.Delete();
                 File.Delete(dialog.FileName);
                 File.Move(dialog.FileName + "$tmp", dialog.FileName);
             }
             else
             {
-                wzf.SaveToDisk(dialog.FileName);
+                wzf.SaveToDisk(dialog.FileName, bUseMapleFireKey);
                 wzNode.Delete();
             }
             Program.WzMan.LoadWzFile(dialog.FileName, (WzMapleVersion)encryptionBox.SelectedIndex, panel);

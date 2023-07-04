@@ -20,6 +20,7 @@ namespace HaRepacker.GUI
         {
             this.panel = panel;
             InitializeComponent();
+            encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeMapleFire);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeGMS);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeMSEA);
             encryptionBox.Items.Add(HaRepacker.Properties.Resources.EncTypeNone);
